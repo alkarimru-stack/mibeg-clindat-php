@@ -1,4 +1,6 @@
 <?php
+print "Hello, World!"\n;
+<?php
 print "Hello, Nata! \n ";
 $vorname = "Nataliya Alkarim";
 print "Hallo, " . $vorname . "\n";
@@ -29,43 +31,32 @@ else {
     print "Wahrscheinlich gesund. Vielleicht auch lecker.";
 }
 print PHP_EOL;
-//switch
+?php
 
 $land = "Syrien";
-
+//switch case
 switch ($land) {
     case "Syrien":
-        print "Damaskus";
+        print "Damaskus" . PHP_EOL;
         break;
     case "Russland":
-        print "Moskau";
+        print "Moskau" . PHP_EOL;
         break;
     case "Ukraine":
-        print "Kiew";
+        print "Kiew" . PHP_EOL;
+        break;
+    case "Kamerun":
+        print "Yaoundé" . PHP_EOL;
         break;
     case "Deutschland":
-        print "Berlin";
+        print "Berlin" . PHP_EOL;
         break;
-        default:
-        print "Sorry, dieses Land ist nicht mit in Videocall."; PHP_EOL;
-        
+    default:
+        print "Sorry, dieses Land ist nicht mit im Videocall." . PHP_EOL;
 }
 
 //match
-$land = "Ukraine";
-
-$hauptstadt = match ($land) {
-    "Syrien" => "Damaskus",
-    "Russland" => "Moskau",
-    "Ukraine" => "Kiew",
-    "Kamerun" => "Yaoundé",
-    "Deutschland" => "Berlin",
-    default => "Sorry, dieses Land ist nicht mit im Videocall."
-};
-
-print $hauptstadt . PHP_EOL;
-
-$land = "poland";
+$land = "Russland";
 
 $hauptstadt = match ($land) {
     "Syrien" => "Damaskus",
@@ -89,7 +80,10 @@ $oldEnough = $personAge >= 18
 
 print $oldEnough . PHP_EOL;
 
-function which_is_bigger(int $n1, int $n2): int {
+// function
+
+
+function which_is_smaller(int $n1, int $n2): int {
     if ($n1 < $n2) {
         return $n1;
     }
@@ -97,42 +91,9 @@ function which_is_bigger(int $n1, int $n2): int {
         return $n2;
     }
 }
-print which_is_bigger(5, 8) . PHP_EOL;
-print which_is_bigger(15, 8) . PHP_EOL;
 
-//
-function which_is_smaller_new(string $n1, string $n2): string {
-    if ($n1 < $n2) {
-        return $n1;
-    }
-    else {
-        return $n2;
-    }
-};
-
-print which_is_smaller_new("abc", "xzy") . PHP_EOL;
-
-function which_is_smaller($n1, $n2) {
-if ($n1 < $n2) {
-return $n1;
-}
-else {
-return $n2;
-}
-};
-
-function which_is_bigger_float($n1, $n2): string{
-    if ($n1 < $n2) {
-        return $n1;
-    }
-    else {
-        return $n2;
-    }
-}
-print which_is_bigger_float(0.5, 8.3) . PHP_EOL;
-print which_is_bigger_float(100.3, 7.6) . PHP_EOL;
-
-function which_is_smaller_again(int $n1, int $n2): string{
+<?php
+function which_is_smaller(int $n1, int $n2): string{
     if ($n1 == $n2) {
         return "Die Zahlen sind gleich groß";
     } elseif ($n1 < $n2) {
@@ -143,4 +104,4 @@ function which_is_smaller_again(int $n1, int $n2): string{
     }
 }
 
-print which_is_smaller_again(13, 13) . PHP_EOL;
+print which_is_smaller(13,13) . PHP_EOL;
